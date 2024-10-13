@@ -4,9 +4,93 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white dark:bg-gray-950 text-black;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-[32px] font-bold;
+  }
+  h2 {
+    @apply text-[24px] font-bold;
+  }
+  h3 {
+    @apply text-[20px] font-bold;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply text-[18px] font-bold;
+  }
+}
+
+@layer components {
+  .banner {
+    background-image: radial-gradient(
+      at bottom,
+      #edd16c 0%,
+      #e5ac47 16%,
+      #dd8620 100%
+    );
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 border border-black rounded-[30px];
+  }
+
+  .btn-primary::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("/vector/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 8px;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .btn-primary:hover::after {
+    background-image: url("/vector/arrow-white.svg");
+    transition: opacity 1s ease-in-out;
+  }
+
+  .navCard {
+    @apply bg-red-50 w-full h-full;
+  }
+
+  .navCard.navText {
+    @apply bg-transparent flex flex-col justify-center gap-3 text-center p-3 max-w-[500px] mx-auto;
+  }
+
+  .navCard.navText h2 {
+    background: -webkit-linear-gradient(#edd16c 0%, #e5ac47 16%, #dd8620 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navCard.navTWImage {
+    @apply bg-transparent flex flex-col gap-3 text-start mx-auto border border-black rounded-[32px] p-8;
+  }
+}
+
+@layer utilities {
+  .btn-agency {
+    @apply px-4 py-2 border border-black rounded-[30px];
+    background: linear-gradient(#b2d47a 0%, #7aa731 100%);
+  }
+  .btn-agency::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("/vector/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 8px;
   }
 }
