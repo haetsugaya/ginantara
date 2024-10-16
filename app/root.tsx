@@ -9,6 +9,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import tailwind from "~/tailwind.css?url";
+import { useGoogleTagManager, useGoogleTagManagerNoScript } from "./utils/gtm";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,6 +29,14 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const gtmContainerIds = process.env.GTM_CONTAINER_IDS?.split(",") || [];
+
+  // Only call the GTM functions if the array or env is not empty
+  if (gtmContainerIds.length > 0) {
+    useGoogleTagManager(gtmContainerIds);
+    useGoogleTagManagerNoScript(gtmContainerIds);
+  }
+  
   return (
     <html lang="en">
       <head>
