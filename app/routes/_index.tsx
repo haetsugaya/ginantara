@@ -7,28 +7,9 @@ import { BtnPrimary } from "~/components/btnprimary";
 import { NavCardText } from "~/components/navcardtext";
 import { Link } from "@remix-run/react";
 
-export async function loader() {
-  const seoData: seo.SEOMetadata = {
-    title: "Arya Anjar Ginantara",
-    description: "Seorang Full-stack Developer and A SEO Enthusiast dari Bali!",
-    keywords: "full-stack developer, SEO, Bali, web development",
-    ogTitle: "Arya Anjar Ginantara - Full-stack Developer & SEO Enthusiast",
-    ogDescription:
-      "Berkenalan dengan karya Arya Anjar Ginantara, seorang pengembang full-stack yang penuh semangat dan penggemar SEO dari Bali, Indonesia.",
-    ogImage: "",
-    ogUrl: "https://ginantara.xyz",
-    canonicalUrl: "https://ginantara.xyz",
-  };
 
-  return json({ seoData });
-}
-
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  if (!data || !data.seoData) {
+export const meta: MetaFunction = () => {
     return seo.defaultMetaData;
-  } else {
-    return seo.generateSEOMetadata(data.seoData);
-  }
 };
 
 const Main = () => {

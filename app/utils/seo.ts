@@ -11,6 +11,7 @@ export interface SEOMetadata {
   twitterSite?: string;
   twitterCreator?: string;
   canonicalUrl?: string;
+  customMeta?: { [key: string]: string }[];
 }
 
 export function generateSEOMetadata({
@@ -26,6 +27,7 @@ export function generateSEOMetadata({
   twitterSite = "@your_twitter_handle",
   twitterCreator = "@your_twitter_handle",
   canonicalUrl,
+  customMeta = []
 }: SEOMetadata): Record<string, string>[] {
   const metadata: Record<string, string>[] = [
     { title },
@@ -53,6 +55,11 @@ export function generateSEOMetadata({
   // Canonical URL
   if (canonicalUrl) metadata.push({ rel: "canonical", href: canonicalUrl });
 
+  // Custom Meta
+  for (const customItem of customMeta) {
+    metadata.push(customItem);
+  }
+
   return metadata;
 }
 
@@ -66,4 +73,7 @@ export const defaultMetaData = generateSEOMetadata({
   ogImage: "",
   ogUrl: "https://ginantara.xyz",
   canonicalUrl: "https://ginantara.xyz",
+  customMeta: [
+    { name: "robots", content: "index, follow" },
+  ]
 });
