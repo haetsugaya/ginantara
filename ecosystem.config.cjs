@@ -3,10 +3,11 @@ module.exports = {
     {
       name: "ginantara-fe",
       script: "npm",
-      args: "run start", 
+      args: "run start",
       interpreter: "none",
       env: {
-        PORT: 3102,
+        PORT: 666,
+        GTM_CONTAINER_ID: "gtm-id-here",
       },
     },
   ],
