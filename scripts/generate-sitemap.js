@@ -4,7 +4,7 @@ import * as path from "path";
 import { glob } from "glob";
 
 // Configuration
-const SITE_URL = "https://your-site.com"; // Replace with your site URL
+const SITE_URL = "https://ginantara.xyz"; // Replace with your site URL
 const PUBLIC_DIR = "./public";
 const ROUTES_DIR = "./app/routes";
 
