@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ginantara.xyz/sitemap.xml
+Sitemap: https://ginantara.xyz/sitemap_index.xml
+Sitemap: https://ginantara.xyz/blog/sitemap.xml/
