@@ -2,7 +2,7 @@ import { LoaderFunction } from "@remix-run/node";
 
 // Sample data for sitemap URLs
 const sitemaps = [
-    { loc: "https://ginantara.xyz/sitemap-pages.xml", lastmod: "2024-11-27T12:00:00+00:00" },
+    { loc: "https://ginantara.xyz/sitemap_pages.xml", lastmod: "2024-11-27T12:00:00+00:00" },
 ];
 
 export const loader: LoaderFunction = async () => {
