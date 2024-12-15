@@ -1,4 +1,4 @@
-import type { LinkDescriptor } from "@remix-run/node";
+import type { LinkDescriptor } from "react-router";
 
 export const combineLinks = (
   ...linkArrays: LinkDescriptor[][]

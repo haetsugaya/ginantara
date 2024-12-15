@@ -1,4 +1,4 @@
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction } from "react-router";
 import {pages, pageSiteMap} from "~/routes/[sitemap_pages.xml]/pages.type";
 export const loader: LoaderFunction = async () => {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,4 +1,4 @@
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction } from "react-router";
 
 // Sample data for sitemap URLs
 const sitemaps = [

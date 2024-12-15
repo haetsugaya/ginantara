@@ -1,6 +1,6 @@
 import { NavItem } from "~/libs/constant/types.server";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 export const NavData: NavItem[] = [
   { url: "/", name: "Home" },
