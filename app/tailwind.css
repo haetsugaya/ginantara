@@ -84,7 +84,7 @@ body {
   }
 
   .body-text {
-    @apply flex flex-col gap-single;
+    @apply flex flex-col gap-small;
   }
 
   .body-text ul {
