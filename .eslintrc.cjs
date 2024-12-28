@@ -28,12 +28,13 @@ module.exports = {
     // React
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
-      plugins: ["react", "jsx-a11y"],
+      plugins: ["react", "jsx-a11y", "unused-imports"],
       extends: [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
       ],
       settings: {
         react: {
@@ -48,12 +49,38 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            vars: "all",
+            varsIgnorePattern: "^_",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+          },
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "import/order": [
+          "error",
+          {
+            groups: [
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+            ],
+            "newlines-between": "always",
+            alphabetize: { order: "asc", caseInsensitive: true },
+          },
+        ],
+      },
     },
 
     // Typescript
     {
       files: ["**/*.{ts,tsx}"],
-      plugins: ["@typescript-eslint", "import"],
+      plugins: ["@typescript-eslint", "import", "unused-imports"],
       parser: "@typescript-eslint/parser",
       settings: {
         "import/internal-regex": "^~/",
@@ -65,6 +92,32 @@ module.exports = {
             alwaysTryTypes: true,
           },
         },
+      },
+      rules: {
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            vars: "all",
+            varsIgnorePattern: "^_",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+          },
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "import/order": [
+          "error",
+          {
+            groups: [
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+            ],
+            "newlines-between": "always",
+            alphabetize: { order: "asc", caseInsensitive: true },
+          },
+        ],
       },
       extends: [
         "plugin:@typescript-eslint/recommended",
