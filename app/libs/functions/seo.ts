@@ -53,7 +53,8 @@ export function generateSEOMetadata({
     metadata.push({ name: "twitter:creator", content: twitterCreator });
 
   // Canonical URL
-  if (canonicalUrl) metadata.push({ rel: "canonical", href: canonicalUrl });
+  if (canonicalUrl)
+    metadata.push({ tagName: "link", rel: "canonical", href: canonicalUrl });
 
   // Custom Meta
   for (const customItem of customMeta) {

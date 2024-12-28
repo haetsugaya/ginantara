@@ -8,6 +8,7 @@ export const meta: MetaFunction = () => {
   const seoDescription =
     "Perkenalkan Saya Arya, seorang Fullstack Developer dari Bali, baca lebih lanjut untuk lihat prodil saya ya!";
   const seoURL = "https://ginantara.xyz/tentang-saya";
+  const robots = { name: "robots", content: "index, follow" };
   return seo.generateSEOMetadata({
     title: seoTitle,
     description: seoDescription,
@@ -15,6 +16,7 @@ export const meta: MetaFunction = () => {
     ogDescription: seoDescription,
     ogUrl: seoURL,
     canonicalUrl: seoURL,
+    customMeta: [robots],
   });
 };
 
