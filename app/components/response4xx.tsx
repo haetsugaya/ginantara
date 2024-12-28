@@ -1,4 +1,5 @@
-import { isRouteErrorResponse } from "@remix-run/react";
+import { isRouteErrorResponse } from "react-router";
+
 import { Nav } from "./nav";
 
 export const default404 = (error: unknown) => {

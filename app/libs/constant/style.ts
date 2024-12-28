@@ -1,5 +1,6 @@
+import type { LinkDescriptor } from "react-router";
+
 import tailwind from "~/tailwind.css?url";
-import type { LinkDescriptor } from "@remix-run/node";
 
 export const styleLinks: LinkDescriptor[] = [
   {

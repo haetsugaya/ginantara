@@ -76,6 +76,24 @@ body {
   .navCard.navTWImage {
     @apply bg-transparent flex flex-col gap-3 text-start mx-auto border border-black rounded-[32px] p-8;
   }
+
+  .heading-colorful {
+    background: -webkit-linear-gradient(#edd16c 0%, #e5ac47 16%, #dd8620 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .body-text {
+    @apply flex flex-col gap-small;
+  }
+
+  .body-text ul {
+    @apply list-disc ml-4 pl-4;
+  }
+
+  .section-wrapper {
+    @apply max-w-[1120px] mx-auto;
+  }
 }
 
 @layer utilities {

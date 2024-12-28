@@ -1,4 +1,4 @@
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction } from "react-router";
 
 export const loader: LoaderFunction = async () => {
   const xslContent = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
 import { motion as m } from "framer-motion";
+import React, { ReactNode } from "react";
 
 const navCardAnimation = {
   offscreen: { y: 50, opacity: 0 },

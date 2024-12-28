@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import React, { useState } from "react";
+import { Link } from "react-router";
 
 interface BtnPrimaryProps {
   title: string;

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import React, { useState } from "react";
+import { Link } from "react-router";
 
 const navCardAnimation = {
   offscreen: { y: 50, opacity: 0 },

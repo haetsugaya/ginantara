@@ -1,4 +1,5 @@
-import { useRouteError } from "@remix-run/react";
+import { useRouteError } from "react-router";
+
 import { Nav } from "~/components/nav";
 import { default404 } from "~/components/response4xx";
 
