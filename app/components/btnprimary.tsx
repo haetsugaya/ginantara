@@ -1,6 +1,6 @@
+import { motion as m } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router";
-import { motion as m } from "framer-motion";
 
 interface BtnPrimaryProps {
   title: string;

@@ -1,5 +1,6 @@
-import tailwind from "~/tailwind.css?url";
 import type { LinkDescriptor } from "react-router";
+
+import tailwind from "~/tailwind.css?url";
 
 export const styleLinks: LinkDescriptor[] = [
   {

@@ -1,6 +1,7 @@
-import { NavItem } from "~/libs/constant/types.server";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { Link } from "react-router";
+
+import { NavItem } from "~/libs/constant/types.server";
 
 export const NavData: NavItem[] = [
   { url: "/", name: "Home" },
@@ -29,13 +30,13 @@ export const Nav = () => {
       </div>
       <ul className="flex w-fit justify-center items-center space-x-6">
         {NavData.map((item, index) => (
-          <li className="text-[24px]" key={index}>
+          <li className="text-[14px] md:text-[24px]" key={index}>
             <Link to={item.url} className="hover:text-gray-200">
               {item.name}
             </Link>
           </li>
         ))}
-        <li className="text-[24px]">
+        <li className="text-[14px] md:text-[24px]">
           <a href="/blog" className="hover:text-gray-200">
             Blog
           </a>

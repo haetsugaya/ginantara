@@ -1,9 +1,9 @@
 import { type MetaFunction } from "react-router";
+
 import { Banner } from "~/components/banner";
 import * as seo from "~/libs/functions/seo";
+
 import { NavCardSection } from "./component/navcard";
-import { Footer } from "~/components/footer";
-import { Outlet } from "react-router";
 
 export const meta: MetaFunction = () => {
   return seo.defaultMetaData;
@@ -14,8 +14,6 @@ const Main = () => {
     <main>
       <Banner />
       <NavCardSection />
-      <Outlet />
-      <Footer />
     </main>
   );
 };

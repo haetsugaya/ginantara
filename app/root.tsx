@@ -7,14 +7,17 @@ import {
   useLoaderData,
   useRouteError,
 } from "react-router";
-import type { LinksFunction,  } from "react-router";
+import type { LinksFunction } from "react-router";
+
+import { Footer } from "~/components/footer";
+
+import { fontLinks } from "./libs/constant/fonts";
+import { styleLinks } from "./libs/constant/style";
 import {
   useGoogleTagManager,
   useGoogleTagManagerNoScript,
 } from "./libs/functions/gtm";
 import { combineLinks } from "./libs/functions/links";
-import { fontLinks } from "./libs/constant/fonts";
-import { styleLinks } from "./libs/constant/style";
 
 export async function loader() {
   return {
@@ -43,6 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -65,7 +69,6 @@ export function ErrorBoundary() {
         <Links />
       </head>
       <body>
-        {/* add the UI you want your users to see */}
         <Scripts />
       </body>
     </html>

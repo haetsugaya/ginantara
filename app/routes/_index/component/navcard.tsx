@@ -1,4 +1,5 @@
 import { LazyMotion, domAnimation } from "framer-motion";
+
 import { NavCard } from "~/components/navcard";
 import { NavCardText } from "~/components/navcardtext";
 

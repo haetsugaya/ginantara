@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export const useGoogleTagManager = (gtmIds: string[]) => {
   useEffect(() => {
     gtmIds.forEach((gtmId) => {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.innerHTML = `
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -14,7 +14,7 @@ export const useGoogleTagManager = (gtmIds: string[]) => {
       `;
       document.head.appendChild(script);
     });
-    
+
     return () => {
       gtmIds.forEach((gtmId) => {
         const script = document.querySelector(`script[src*="id=${gtmId}"]`);
@@ -30,7 +30,7 @@ export const useGoogleTagManager = (gtmIds: string[]) => {
 export const useGoogleTagManagerNoScript = (gtmIds: string[]) => {
   useEffect(() => {
     gtmIds.forEach((gtmId) => {
-      const noscript = document.createElement('noscript');
+      const noscript = document.createElement("noscript");
       noscript.innerHTML = `
         <iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -40,7 +40,9 @@ export const useGoogleTagManagerNoScript = (gtmIds: string[]) => {
 
     return () => {
       gtmIds.forEach((gtmId) => {
-        const noscript = document.querySelector(`noscript iframe[src*="id=${gtmId}"]`);
+        const noscript = document.querySelector(
+          `noscript iframe[src*="id=${gtmId}"]`,
+        );
         if (noscript && noscript.parentNode) {
           noscript.parentNode.removeChild(noscript);
         }

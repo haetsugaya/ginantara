@@ -27,7 +27,7 @@ export function generateSEOMetadata({
   twitterSite = "@your_twitter_handle",
   twitterCreator = "@your_twitter_handle",
   canonicalUrl,
-  customMeta = []
+  customMeta = [],
 }: SEOMetadata): Record<string, string>[] {
   const metadata: Record<string, string>[] = [
     { title },
@@ -73,7 +73,5 @@ export const defaultMetaData = generateSEOMetadata({
   ogImage: "",
   ogUrl: "https://ginantara.xyz",
   canonicalUrl: "https://ginantara.xyz",
-  customMeta: [
-    { name: "robots", content: "index, follow" },
-  ]
+  customMeta: [{ name: "robots", content: "index, follow" }],
 });

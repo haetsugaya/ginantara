@@ -1,5 +1,6 @@
-import { BtnPrimary } from "~/components/btnprimary";
 import { Link } from "react-router";
+
+import { BtnPrimary } from "~/components/btnprimary";
 
 export const Footer = () => {
   return (
