@@ -23,9 +23,9 @@ export function generateSEOMetadata({
   ogDescription,
   ogImage,
   ogUrl,
-  twitterCard = "summary_large_image",
-  twitterSite = "@your_twitter_handle",
-  twitterCreator = "@your_twitter_handle",
+  twitterCard = "/arya-anjar.png",
+  twitterSite = "@aaginantara",
+  twitterCreator = "@aaginantara",
   canonicalUrl,
   customMeta = [],
 }: SEOMetadata): Record<string, string>[] {
