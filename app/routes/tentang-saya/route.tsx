@@ -4,7 +4,18 @@ import { Nav } from "~/components/nav";
 import * as seo from "~/libs/functions/seo";
 
 export const meta: MetaFunction = () => {
-  return seo.defaultMetaData;
+  const seoTitle = "Tentang Arya Anjar Ginantara";
+  const seoDescription =
+    "Perkenalkan Saya Arya, seorang Fullstack Developer dari Bali, baca lebih lanjut untuk lihat prodil saya ya!";
+  const seoURL = "https://ginantara.xyz/tentang-saya";
+  return seo.generateSEOMetadata({
+    title: seoTitle,
+    description: seoDescription,
+    ogTitle: seoTitle,
+    ogDescription: seoDescription,
+    ogUrl: seoURL,
+    canonicalUrl: seoURL,
+  });
 };
 
 const BodyAbout = () => {
@@ -13,7 +24,7 @@ const BodyAbout = () => {
       <div className={"flex flex-col-reverse md:flex-row gap-section"}>
         <div
           className={
-            "flex flex-col gap-single md:max-w-[400px] lg:max-w-[600px] px-horizontal"
+            "flex flex-col gap-default md:max-w-[400px] lg:max-w-[600px] px-horizontal"
           }
         >
           <div className={"body-text"}>
@@ -67,6 +78,8 @@ const BodyAbout = () => {
               saya memahami berbagai tenologi yang ada saat ini, terutama yang
               paling sering digunakan adalah:
             </p>
+          </div>
+          <div className={"body-text"}>
             <h3 className={"text-[16px]"}>Favorite Programming Language:</h3>
             <ul>
               <li>PHP</li>
@@ -74,12 +87,16 @@ const BodyAbout = () => {
               <li>Python</li>
               <li>Golang</li>
             </ul>
+          </div>
+          <div className={"body-text"}>
             <h3 className={"text-[16px]"}>Favorite Framework:</h3>
             <ul>
               <li>Remix or React Router 7</li>
               <li>Laravel</li>
               <li>Nuxt</li>
             </ul>
+          </div>
+          <div className={"body-text"}>
             <h3 className={"text-[16px]"}>
               Teknologi favorite lainnya yang sering digunakan:
             </h3>
