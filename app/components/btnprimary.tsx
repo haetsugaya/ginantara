@@ -4,13 +4,13 @@ import { Link } from "react-router";
 
 interface BtnPrimaryProps {
   title: string;
-  linkTo: string;
+  linkTo?: string;
   linkExt?: string;
 }
 
 export const BtnPrimary: React.FC<BtnPrimaryProps> = ({
   title,
-  linkTo,
+  linkTo = "#",
   linkExt = null,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -19,6 +19,7 @@ export const BtnPrimary: React.FC<BtnPrimaryProps> = ({
       <m.a
         className="btn-primary"
         href={linkExt}
+        target="_blank noreferrer"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         animate={{

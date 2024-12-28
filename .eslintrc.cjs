@@ -74,6 +74,12 @@ module.exports = {
             alphabetize: { order: "asc", caseInsensitive: true },
           },
         ],
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "lf"
+          }
+        ]
       },
     },
 
@@ -118,6 +124,12 @@ module.exports = {
             alphabetize: { order: "asc", caseInsensitive: true },
           },
         ],
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "lf"
+          }
+        ]
       },
       extends: [
         "plugin:@typescript-eslint/recommended",

@@ -16,9 +16,20 @@ export const Footer = () => {
       <footer className="bg-white py-6 px-4">
         <section className="flex flex-col sm:flex-row justify-between items-center max-w-[1200px] mx-auto gap-6">
           <div className="flex gap-3 justify-center">
-            <BtnPrimary title="Resume" linkTo="#" />
-            <BtnPrimary title="LinkedIn" linkTo="#" />
-            <BtnPrimary title="Instagram" linkTo="#" />
+            <BtnPrimary
+              title="Resume"
+              linkExt={
+                "https://www.canva.com/design/DAFMlqaRo04/L7RZfHFqCdOkCVVTU-ampw/view"
+              }
+            />
+            <BtnPrimary
+              title="LinkedIn"
+              linkExt={"https://www.linkedin.com/in/anjarginantara/"}
+            />
+            <BtnPrimary
+              title="Instagram"
+              linkExt={"https://www.instagram.com/anjarginantara/"}
+            />
           </div>
           <Link to="/" className="font-bold text-xl">
             Ginantara.xyz
